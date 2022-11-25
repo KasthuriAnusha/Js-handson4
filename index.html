@@ -89,7 +89,22 @@ pro *= array[i];
     <br>
     <b>Note:</b> You have to complete Find_Num. No need to take any input.</p>
     <pre>
-
+      const Find_Num = (array,N,M) => 
+      {
+        count = 0
+        for(i=0; i < array.length; i++){
+          if(array[i] === M){
+            count += 1
+          }
+          
+        }
+        if (count>0){
+          return "YES"
+        }
+        else{
+          return "NO"
+      }
+      };
     </pre>
     <hr>
     <h3>6. Higher Age</h3>
@@ -98,7 +113,17 @@ pro *= array[i];
         <br>
         <b>Note:</b> Also, in the output array, the age should be in the same order as in the input array. You have to complete highAge function. No need to take any input.</p>
         <pre>
-
+          const highAge = (N, Arr) => 
+          {
+            let ArrB=[] 
+            
+            for(i=0;i<N;i++){
+              if(Arr[i]>=18){
+                ArrB.push(Arr[i])
+              }
+            }
+            return ArrB
+          };
         </pre>
         <hr>
 <h3>6. Increment the Array Elements</h3>
@@ -140,7 +165,28 @@ pro *= array[i];
     <b>Note:</b> As there are many shades of a color so consider integers as a color name.
     i.e, color of shirt is 0,1,2, … , N.</p>
     <pre>
-
+      {
+        let temp=""
+        let dress = 0
+        
+        
+        for(let i=0; i < N; i++){
+           let count=0
+          for(let j=0; j < N; j++){
+            
+         
+          if(arr[i] === arr[j]){
+           count++
+            
+          }
+        }
+        if(count==1){
+          temp=temp+arr[i]
+          dress++
+        }
+        }
+        return dress
+}
     </pre>
     <hr>
     <h3>9. Min and Max</h3>
